@@ -1,13 +1,14 @@
 ## Born2BeRoot Guide 
 This guide has 8 Parts: 
-- Part 1 - Downloading Your Virtual Machine
-- Part 2 - Installing Your Virtual Machine
+- Part 1 - Installing Your Virtual Machine
 - Part 3 - Starting Your Virtual Machine
 - Part 4 - Configurating Your Virtual Machine
 - Part 5 - Connecting to SSH
 - Part 6 - Continue Configurating Your Virtual Machine
 - Part 7 - Signature.txt
 - Part 8 - Your Born2BeRoot Defence Evaluation with Answers
+
+## This guide assumes Virtual Box is downloaded on your system
 
 ## Part 1 - Downloading Debian
 
@@ -31,15 +32,15 @@ This guide has 8 Parts:
 
 <!-- <img width="622" alt="Screen Shot 2022-07-26 at 4 26 38 PM" src="https://user-images.githubusercontent.com/58959408/180943705-d9705f63-59a9-4b2d-9130-75d8711a25d3.png"> -->
 
-4. Then type `chmod 700 <your intra username>`
+4. Then type `chmod 700 <your intra username> && cd <your intra username`
 
-5. Then make directory called "born2beroot" (don't change the permisions)
+5. Then make directory called `born2beroot` (don't change the permisions)
 
 <!-- <img width="622" alt="Screen Shot 2022-07-26 at 4 26 48 PM" src="https://user-images.githubusercontent.com/58959408/180943745-09427be5-f0ff-4100-aaa3-56b4cfcea2af.png"> -->
 
-5. Add your Debian Download (from earlier) to the file to the "born2beroot" folder.
+6. Add your Debian Download (from earlier) to the file to the "born2beroot" folder.
 
-### Part 1.2 - Virtual Box
+<!-- ### Part 1.2 - Virtual Box
 
 #### Now head over to Virtual Box to continue on.
 <img width="264" alt="Screen Shot 2022-06-24 at 12 18 12 PM" src="https://user-images.githubusercontent.com/58959408/175452234-79c7f008-10b2-4e4b-a602-95886d9e2508.png">
@@ -48,11 +49,13 @@ This guide has 8 Parts:
 Download it from Managed Software Center on an Apple Computer/Laptop.
 
 <img width="1307" alt="Screen Shot 2022-06-24 at 12 27 24 PM" src="https://user-images.githubusercontent.com/58959408/175453219-e30d058a-946c-482b-85de-4feaad7b970d.png">
+ -->
 
+## Part 2 - Creating your Virtual Machine
 
-## Part 2 - Installing Your Virtual Machine
+1. Open `Virtual Box`
 
-1. Click on `New`
+2. Click on `New`
 
 ![1*tkjZEbnHKqPGN24HQw_kRA](https://user-images.githubusercontent.com/58959408/174700376-2862e8e9-0a7a-4681-af3b-e82dbc7d9aa5.png)
 
@@ -76,7 +79,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ![1*HagpR-UD0HWCb7zRTeSQXQ](https://user-images.githubusercontent.com/58959408/174744677-eac5b679-49f7-4881-a59b-00a420cbe640.png)
 
-7. Set Size as `12.00 GB` and then click `Continue` this should be enough for this project.
+7. Set Size as `8.00 GB` and then click `Continue`.
 
 ![1*rYdYJbPswCVCUa5pwKcRZA](https://user-images.githubusercontent.com/58959408/174745855-73880988-be69-45cc-bb6d-7c6c1a40c1ac.png)
 
@@ -131,7 +134,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ## ⚠️ NOTE: Whenever you are told to create a password, use the same password as everything.
 
-5. Create a Host Name as your login, with 42 at the end (eg. prossi42) - write down your Host Name, as you will need this later on.
+5. Create a Host Name as your login, with 42 at the end (eg. mmirzaie42) - write down your Host Name, as you will need this later on.
 	
 ![1*r0fzgkzXOjK2DfsBCh7wEQ](https://user-images.githubusercontent.com/58959408/174729750-fbd2d215-b526-42c6-8ff0-b83f886c1f3c.png)
 
@@ -143,7 +146,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 	
 ![1*ft498oj7syh4zVjI48U_tw](https://user-images.githubusercontent.com/58959408/174729894-d0fc794f-add8-49e7-9015-521f9e93958f.png)
 
-8. Create a User Name without 42 at the end (eg. prossi) - write down your Host Name, as you will need this later on. 
+8. Create a User Name without 42 at the end (eg. mmirzaie) - write down your Host Name, as you will need this later on. 
 	
 ![1*rhJWnMKN0TPBZwqRey9OeQ](https://user-images.githubusercontent.com/58959408/174729939-06933a35-5dd1-4924-848e-78d2023bb66e.png)
 
@@ -181,7 +184,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 	
 ![1*xE1owXa0ttpvcioaEwnutA](https://user-images.githubusercontent.com/58959408/174730804-796f6db1-8b59-4f8e-900c-1416f957db30.png)
 
-18. Type in `max`and press enter on `Continue` to assign the amount of volume group to use for guided partitioning.
+18. Type in `max` and press enter on `Continue` to assign the amount of volume group to use for guided partitioning.
 	
 ![1*SUFMu-qy3rBwIe9B0Bq3kg](https://user-images.githubusercontent.com/58959408/174730857-2de10217-3d42-41ca-8f43-fc91fddb64c6.png)
 
@@ -244,7 +247,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ## Part 4 - Configurating Your Virtual Machine
 
-### Part 4.1 - Installing Sudo
+### Part 4.1 - Installing Sudo (Super User Do)
 
 1. First type `su -` to login in as the root user.
 2. Then type `apt-get update -y` 
@@ -258,6 +261,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 1. Then type `apt-get install git -y` to install Git
 2. Then type `git --version` to check the Git Version
+3. Then type `apt-get install vim -y` to install Vim
 
 ### Part 4.3 - Installing and Configuring SSH (Secure Shell Host)
 
@@ -266,11 +270,13 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 3. Type `sudo vim /etc/ssh/sshd_config`
 4. Find this line `#Port22` 
 5. Change the line to `Port 4242` without the # (Hash) in front of it
-6. Save and Exit Vim 
+6. Save and Exit Vim (press `esc` then `shift ZZ`)
 7. Then type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings are right
 8. Lastly type `sudo service ssh restart` to restart the SSH Service 
 
 ### Part 4.4 - Installing and Configuring UFW (Uncomplicated Firewall)
+
+# these steps are important as they will allow you to connect to your virtual machine through your host machine with iterm.
 
 1. First type `apt-get install ufw` to install UFW
 2. Type `sudo ufw enable` to inable UFW
@@ -279,8 +285,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 5. Type `sudo ufw allow 4242` to configure the Port Rules
 6. Lastly Type `sudo ufw status numbered` to check the status of UFW 4242 Port
 
-
-## Part 5 Connecting to SSH
+## Part 5 Connecting to Virtual Machine using SSH
 
 0. To exit your Virtual Machine and use your mouse, press `command` on your Apple Keyboard and your mouse should appear
 1. Go to your Virtual Box Program
@@ -292,10 +297,13 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 5. Then head back to your Virtual Machine
 6. Type `sudo systemctl restart ssh` to restart your SSH Server
 7. Type `sudo service sshd status` to check your SSH Status
-8. Open an iTerm and type the following `ssh your_username@127.0.0.1 -p 4242`
-9. In case an error occurs, then type `rm ~/.ssh/known_hosts` in your iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
-10. Lastly type `exit` to quit your SSH iTerm Connection 
 
+# part 5.1 connect your host computer to the VM
+
+1. Open an iTerm and type the following `ssh your_username@127.0.0.1 -p 4242`
+2. In case an error occurs, then type `rm ~/.ssh/known_hosts` in your iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
+	- 2.2 now you are connect.
+3. Lastly type `exit` to quit your SSH iTerm Connection 
 
 ## Part 6 - Continue Configurating Your Virtual Machine
 
@@ -317,24 +325,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 8. Change that part to `PASS_MAX_DAYS 30` and `PASS_MIN_DAYS 2` keep `PASS_WARN_AGE 7` as the same
 9. Lastly type `sudo reboot` to reboot the change affects
 
-### Part 6.2 - Creating a Group
-
-1. First type `sudo groupadd user42` to create a group
-2. Then type `sudo groupadd evaluating` to create an evaluating group
-3. Lastly type `getent group` to check if the group has been created
-
-### Part 6.3 - Creating a User and Assigning Them Into The Group
-
-1. First type `cut -d: -f1 /etc/passwd` to check all local users
-2. Type `sudo adduser new_username` to create a username - write down your new_username, as you will need this later on. 
-- 2.1 Type `sudo usermod -aG user42 your_username`
-- 2.2 Type `sudo usermod -aG evaluating your_new_username`
-3. Type `getent group user42` to check if the user is the group
-4. Type `getent group evaluating` to check the group
-5. Type `groups` to see which groups the user account belongs to
-6. Lastly type `chage -l your_new_username` to check if the password rules are working in users
-
-### Part 6.4 - Creating sudo.log
+### Part 6 - Creating sudo.log
 
 1. First type `cd ~/../`
 4. Then type `cd var/log`
@@ -342,7 +333,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 6. Then type `cd sudo && touch sudo.log`
 7. Then type `cd ~/../`
 
-### Part 6.4.1 - Configuring Sudoers Group
+### Part 6.1 - Configuring Sudoers Group
 
 1. First type `sudo nano /etc/sudoers` to go the sudoers file
 2. Now edit your sudoers file to look like the following by adding in all of the defaults in the image below - ![1*N4Ad-9k0vfvnWKNC5q6MjQ](https://user-images.githubusercontent.com/58959408/174725518-0ebf1dac-4126-4869-9ba0-b1d05ce313c9.png)
@@ -475,6 +466,23 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 - `cd /usr/local/bin` – to show monitoring.sh
 - `sudo crontab -u root -e` – to edit the cron job
 - `change script to */1 * * * * sleep 30s && script path` – to run it every 30 seconds, delete the line to stop the job from running.
+
+### Creating a Group
+
+1. First type `sudo groupadd user42` to create a group
+2. Then type `sudo groupadd evaluating` to create an evaluating group
+3. Lastly type `getent group` to check if the group has been created
+
+### Creating a User and Assigning Them Into The Group
+
+1. First type `cut -d: -f1 /etc/passwd` to check all local users
+2. Type `sudo adduser new_username` to create a username - write down your new_username, as you will need this later on. 
+- 2.1 Type `sudo usermod -aG user42 your_username`
+- 2.2 Type `sudo usermod -aG evaluating your_new_username`
+3. Type `getent group user42` to check if the user is the group
+4. Type `getent group evaluating` to check the group
+5. Type `groups` to see which groups the user account belongs to
+6. Lastly type `chage -l your_new_username` to check if the password rules are working in users
 
 ### Evaluation Commands for UFW, Group, Host, lsblk and SSH
 
