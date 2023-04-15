@@ -1,10 +1,11 @@
 ## Born2BeRoot Guide 
 This guide has 8 Parts: 
-- Part 1 - Installing Your Virtual Machine
-- Part 3 - Starting Your Virtual Machine
-- Part 4 - Configurating Your Virtual Machine
-- Part 5 - Connecting to SSH
-- Part 6 - Continue Configurating Your Virtual Machine
+- Part 1 - Downloading Debian
+- Part 2 - Starting Your Virtual Machine
+- Part 3 - Configurating Your Virtual Machine
+- Part 4 - Connecting to Virtual Machine using SSH
+- Part 5 - Continue Configurating Your Virtual Machine
+- Part 6 - Creating sudo.log
 - Part 7 - Signature.txt
 - Part 8 - Your Born2BeRoot Defence Evaluation with Answers
 
@@ -51,7 +52,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 <img width="1307" alt="Screen Shot 2022-06-24 at 12 27 24 PM" src="https://user-images.githubusercontent.com/58959408/175453219-e30d058a-946c-482b-85de-4feaad7b970d.png">
  -->
 
-## Part 2 - Creating your Virtual Machine
+## Part 2 - Starting your Virtual Machine
 
 1. Open `Virtual Box`
 
@@ -108,7 +109,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 ![1*Yg53c1-01g4VzTqhcVEEcA](https://user-images.githubusercontent.com/58959408/174702806-1bd8fce3-aac6-44b3-84d9-c76252dfecd8.png)
 
 
-## Part 3 - Accessing Your Virtual Machine
+## Part 3 - Configurating Your Virtual Machine
 
 #### In the Virtual Machine, you will not have access to your mouse and will only use your Keyboard to operate your Virtual Machine. 
 
@@ -244,10 +245,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 4. Type `lsblk` in your Virtual Machine to see the partition
 
-
-## Part 4 - Configurating Your Virtual Machine
-
-### Part 4.1 - Installing Sudo (Super User Do)
+### Part 3.2 - Installing Sudo (Super User Do)
 
 1. First type `su -` to login in as the root user.
 2. Then type `apt-get update -y` 
@@ -257,13 +255,13 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 6. Type `sudo visudo` to open sudoers file
 7. Lastly find - # User privilege specification, type `your_username  	ALL=(ALL) ALL`
 
-### Part 4.2 - Installing Git and Vim
+### Part 3.3 - Installing Git and Vim
 
 1. Then type `apt-get install git -y` to install Git
 2. Then type `git --version` to check the Git Version
 3. Then type `apt-get install vim -y` to install Vim
 
-### Part 4.3 - Installing and Configuring SSH (Secure Shell Host)
+### Part 3.4 - Installing and Configuring SSH (Secure Shell Host)
 
 1. Type `sudo apt install openssh-server`
 2. Type `sudo systemctl status ssh` to check SSH Server Status
@@ -274,7 +272,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 7. Then type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings are right
 8. Lastly type `sudo service ssh restart` to restart the SSH Service 
 
-### Part 4.4 - Installing and Configuring UFW (Uncomplicated Firewall)
+### Part 3.5 - Installing and Configuring UFW (Uncomplicated Firewall)
 
 # these steps are important as they will allow you to connect to your virtual machine through your host machine with iterm.
 
@@ -285,7 +283,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 5. Type `sudo ufw allow 4242` to configure the Port Rules
 6. Lastly Type `sudo ufw status numbered` to check the status of UFW 4242 Port
 
-## Part 5 Connecting to Virtual Machine using SSH
+## Part 4 Connecting to Virtual Machine using SSH
 
 0. To exit your Virtual Machine and use your mouse, press `command` on your Apple Keyboard and your mouse should appear
 1. Go to your Virtual Box Program
@@ -298,16 +296,16 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 6. Type `sudo systemctl restart ssh` to restart your SSH Server
 7. Type `sudo service sshd status` to check your SSH Status
 
-# part 5.1 connect your host computer to the VM
+# part 4.1 connect your host computer to the VM
 
 1. Open an iTerm and type the following `ssh your_username@127.0.0.1 -p 4242`
 2. In case an error occurs, then type `rm ~/.ssh/known_hosts` in your iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
 	- 2.2 now you are connect.
 3. Lastly type `exit` to quit your SSH iTerm Connection 
 
-## Part 6 - Continue Configurating Your Virtual Machine
+## Part 5 - Continue Configurating Your Virtual Machine
 
-### Part 6.1 - Setting Password Policy
+### Part 5.1 - Setting Password Policy
 
 1. First type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
 2. Then type `sudo vim /etc/pam.d/common-password`
@@ -407,7 +405,6 @@ wall "	#Architecture: $arc
 12. Type `sudo crontab -u root -e` to open the crontab and add the rule
 13. Lastly at the end of the crontab, type the following `*/10 * * * * /usr/local/bin/monitoring.sh` this means that every 10 mins, this script will show
 
-
 ## Part 7 - Signature.txt (Last Part Before Defence)
 
 ⚠️ Warning: before you generate a signature number, turn off your Virtual Machine. ⚠️
@@ -417,6 +414,8 @@ wall "	#Architecture: $arc
 2. Type `shasum VirtualBox.vdi` or whatever your Virtual Machine is called (This can take from a few seconds to 5 mins).
 3. Copy the output number and create a signature.txt file and paste that number in the file. 
 3. Now you submit the signature.txt file with the output number in it. 
+
+⚠️ Warning: if you configure your VM after getting the signiture, you have to regenerate the signiture. ⚠️
 
 ### 🥳 CONGRATULATIONS! YOU HAVE NOW FINISHED! NEXT IS THE EVALUATION 🔽
 <br>
