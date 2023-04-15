@@ -13,9 +13,9 @@ This guide has 8 Parts:
 
 ## Part 1 - Downloading Debian
 
-1. Click on this link <ins>**https://www.debian.org**
+1. Click on this link <ins>**https://www.debian.org** 
 
-2. click download `debian-mac-xx.x.x-amd64-netinst.iso`
+2. click Download
 
 3. click on 'debian-11.6.0-amd64-netinst.iso' to download it.
 
@@ -25,7 +25,7 @@ This guide has 8 Parts:
 
 <!-- <img width="622" alt="Screen Shot 2022-07-26 at 4 26 06 PM" src="https://user-images.githubusercontent.com/58959408/180943494-9c25b321-4cae-4c39-89bb-92271a245489.png"> -->
 
-2. from the home directory type `cd sgoinfre/students`
+2. From the home directory type `cd sgoinfre/students`
 
 <!-- <img width="622" alt="Screen Shot 2022-07-26 at 4 26 27 PM" src="https://user-images.githubusercontent.com/58959408/180943649-42dba828-3bd3-45ee-92ea-4e7218d65674.png"> -->
 
@@ -33,13 +33,13 @@ This guide has 8 Parts:
 
 <!-- <img width="622" alt="Screen Shot 2022-07-26 at 4 26 38 PM" src="https://user-images.githubusercontent.com/58959408/180943705-d9705f63-59a9-4b2d-9130-75d8711a25d3.png"> -->
 
-4. Then type `chmod 700 <your intra username> && cd <your intra username`
+4. Then type `chmod 700 <your intra username> && cd <your intra username>`
 
 5. Then make directory called `born2beroot` (don't change the permisions)
 
 <!-- <img width="622" alt="Screen Shot 2022-07-26 at 4 26 48 PM" src="https://user-images.githubusercontent.com/58959408/180943745-09427be5-f0ff-4100-aaa3-56b4cfcea2af.png"> -->
 
-6. Add your Debian Download (from earlier) to the file to the "born2beroot" folder.
+6. Add your Debian Download (from earlier) to the "born2beroot" folder you just created.
 
 <!-- ### Part 1.2 - Virtual Box
 
@@ -274,7 +274,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ### Part 3.5 - Installing and Configuring UFW (Uncomplicated Firewall)
 
-# these steps are important as they will allow you to connect to your virtual machine through your host machine with iterm.
+#### These steps are important as they will allow you to connect to your virtual machine through your host machine with iterm.
 
 1. First type `apt-get install ufw` to install UFW
 2. Type `sudo ufw enable` to inable UFW
@@ -296,7 +296,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 6. Type `sudo systemctl restart ssh` to restart your SSH Server
 7. Type `sudo service sshd status` to check your SSH Status
 
-# part 4.1 connect your host computer to the VM
+### part 4.1 connect your host computer to the VM
 
 1. Open an iTerm and type the following `ssh your_username@127.0.0.1 -p 4242`
 2. In case an error occurs, then type `rm ~/.ssh/known_hosts` in your iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
@@ -323,7 +323,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 8. Change that part to `PASS_MAX_DAYS 30` and `PASS_MIN_DAYS 2` keep `PASS_WARN_AGE 7` as the same
 9. Lastly type `sudo reboot` to reboot the change affects
 
-### Part 6 - Creating sudo.log
+## Part 6 - Creating sudo.log
 
 1. First type `cd ~/../`
 4. Then type `cd var/log`
@@ -347,14 +347,14 @@ Defaults	log_input, log_output
 Defaults	requiretty
 ```
 
-### Part 6.5 - Crontab Configuation
+### Part 6.2 - Crontab Configuation
 
 1. Then type `apt-get install -y net-tools` to install the netstat tools
 2. Then type `cd /usr/local/bin/`
 3. Then type `touch monitoring.sh`
 4. Lastly type `chmod 777 monitoring.sh`
 
-### Part 6.5.1 - Copy Text Below onto Virtual Machine 
+### Part 6.2.1 - Copy Text Below onto Virtual Machine 
 ## The clip board of the host machine and VM are not connected so we will have to connect to the VM with ssh.
 
 1. Copy this text (To copy the text below, hover with your mouse to the right corner of the text below and a copy icon will appear). 
