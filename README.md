@@ -355,6 +355,7 @@ Defaults	requiretty
 4. Lastly type `chmod 777 monitoring.sh`
 
 ### Part 6.5.1 - Copy Text Below onto Virtual Machine 
+## The clip board of the host machine and VM are not connected so we will have to connect to the VM with ssh.
 
 1. Copy this text (To copy the text below, hover with your mouse to the right corner of the text below and a copy icon will appear). 
 ```
@@ -415,7 +416,7 @@ wall "	#Architecture: $arc
 3. Copy the output number and create a signature.txt file and paste that number in the file. 
 3. Now you submit the signature.txt file with the output number in it. 
 
-⚠️ Warning: if you configure your VM after getting the signiture, you have to regenerate the signiture. ⚠️
+⚠️ Warning: if you configure your VM after getting the signature, you have to regenerate the signiture. ⚠️
 
 ### 🥳 CONGRATULATIONS! YOU HAVE NOW FINISHED! NEXT IS THE EVALUATION 🔽
 <br>
@@ -429,10 +430,8 @@ wall "	#Architecture: $arc
 ### Why did I choose Debian?
 Easier to install and configure so better for personal servers.
 
-### Difference between Debian and CentOS?
-Debian is a lot easier to update then CentOS when a new version is released. Debian is more user-friendly and supports many libraries, filesystems and architecture. It also has more options for customisation. If you are a larger business CentOS offers more Enterprise features and excellent support for the Enterprise software. 
-
-![1*EUhkzOMoiT_KEF3j402O6g](https://user-images.githubusercontent.com/58959408/175495740-d4599f59-25b1-43ba-9c01-ba4246096f8a.png)
+### Difference between Debian and Rocky
+The main difference between Debian and Rocky is that Debian is an independent, community-driven Linux distribution with a focus on stability, while Rocky Linux is a community enterprise Operating System (OS) based on CentOS, a previously popular Linux distribution that was discontinued by Red Hat. Additionally, Debian has a larger user community, a broader range of packages, and a more diverse set of supported architectures, while Rocky Linux aims to provide a stable, secure, and reliable enterprise-grade platform for organizations.
 
 ### What is a Virtual Machine?
 Is a resource that uses software instead of a physical computer to run programs or apps. Each VM has its own operating system and functions separately, so you can have more than one VM per machine. Can be used to test applications in a safe, separate environment. Works by using software to simulate virtual hardware and run on a host machine.
@@ -443,12 +442,12 @@ Is a resource that uses software instead of a physical computer to run programs 
 * Apt will only do explicitly what it is told to do in the command line
 
 ### What is AppArmor?
-Linux security system that provides Mandatory Access Control (MAC) security. Allows the system admin to restrict the actions that processes can perform. It is included by default with Debian. Run aa-status to check if it is running.
+Linux security system that provides Mandatory Access Control (MAC) security. Allows the system admin to restrict the actions that processes can perform. It is included by default with Debian. Run `aa-status` to check if it is running.
 
 ### Password Rules
 For the password rules, we use the password quality checking library and there are two files the common-password file which sets the rules like upper and lower case characters, duplicate characters etc and the login.defs file which stores the password expiration rules (30 days etc).
-Sudo nano /etc/login.defs
-Sudo nano /etc/pam.d/common-password
+`Sudo nano /etc/login.defs`
+`Sudo nano /etc/pam.d/common-password`
 
 ### What is LVM
 Logical Volume Manager – allows us to easily manipulate the partitions or logical volume on a storage device. 
