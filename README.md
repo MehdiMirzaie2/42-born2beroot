@@ -268,9 +268,23 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 3. Type `sudo vim /etc/ssh/sshd_config`
 4. Find this line `#Port22` 
 5. Change the line to `Port 4242` without the # (Hash) in front of it
-6. Save and Exit Vim (press `esc` then `shift ZZ`)
-7. Then type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings are right
-8. Lastly type `sudo service ssh restart` to restart the SSH Service 
+6. Find this line `#PermitRootLogin`
+7. Change to `PermitRootLogin no`
+
+![1*riuXLYYgESxdq-lpkivFXQ](https://github.com/Javiff8/Born2beRoot/blob/master/Screenshots/Untitled%203.png)
+
+8. Save and Exit Vim (press `esc` then `shift ZZ`)
+9. Then type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings are right
+
+### Part 3.4.1
+
+1. Type `sudo nano /etc//ssh/ssh_config`
+2. Find line containing `#Port 22`
+3. Change it to `Port 4242`
+
+![1*riuXLYYgESxdq-lpkivFXQ](https://github.com/Javiff8/Born2beRoot/blob/master/Screenshots/Untitled%204.png)
+
+4. Lastly type `sudo service ssh restart` to restart the SSH Service 
 
 ### Part 3.5 - Installing and Configuring UFW (Uncomplicated Firewall)
 
