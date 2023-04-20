@@ -278,7 +278,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ### Part 3.4.1
 
-1. Type `sudo nano /etc//ssh/ssh_config`
+1. Type `sudo nano /etc/ssh/ssh_config`
 2. Find line containing `#Port 22`
 3. Change it to `Port 4242`
 
