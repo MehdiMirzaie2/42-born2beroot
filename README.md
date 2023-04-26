@@ -165,7 +165,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 	
 ![1*BTLz5sT6noL_SVQ7eq3u-A](https://user-images.githubusercontent.com/58959408/174730452-e267df43-2883-4760-85c4-010970fee329.png)
 
-13. Press `enter` on Select `Separate /home, /var, and /tmp paritions` (Last option from the list).
+13. Press `enter` on Select `Separate /home partition` (Last option from the list).
 	
 ![1*r5zFPA7R_9BtIqwyOpCCVw](https://user-images.githubusercontent.com/58959408/174730481-2641b9c0-c50d-4f2b-9e71-3896a0760e10.png)
 
