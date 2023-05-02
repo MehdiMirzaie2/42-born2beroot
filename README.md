@@ -339,7 +339,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ## Part 6 - Creating sudo.log
 
-1. First type `cd -`, then type your password.
+1. First type `su -`, then type your password.
 2. Then type `cd ..`
 4. Then type `cd var/log`
 5. Then type `mkdir sudo` (if it already exists, then continue to the next step).
